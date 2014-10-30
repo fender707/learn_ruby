@@ -12,12 +12,15 @@
  end
 
   def multiply(a=[])
-    i=1
-    a.inject(1) {|i, elem| i * elem }
+       a.inject(1) {|i, elem| i * elem }
   end
 
   def power(a,b)
     a**b
   end  
+
+  def factorial(a)
+    a == 0 ? 1 : a * factorial(a-1)
+  end
     
    
