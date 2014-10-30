@@ -15,4 +15,9 @@
     i=1
     a.inject(1) {|i, elem| i * elem }
   end
+
+  def power(a,b)
+    a**b
+  end  
+    
    
