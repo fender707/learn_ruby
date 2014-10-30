@@ -13,3 +13,7 @@
   def start_of_word(say='hello',symbol=1)
     symbol==1 ? say[symbol-1] : say[0..symbol-1]
   end
+
+  def first_word(say)
+    say[0..say.index(" ")-1]
+  end
