@@ -8,7 +8,10 @@
  end
 
  def sum(a=[])
-   result=0
    a.empty? ? 0 : a.inject(0) {|i,e| i+e }  
  end
+
+  def multiply(a=[])
+    a.inject(1) {|i, elem| i * elem }
+  end
    
