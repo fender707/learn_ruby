@@ -7,5 +7,5 @@
   end
 
   def repeat(say='hello', count=0)
-    count == 0 ? ((say + " ") * 2).rstrip : ((say + " ") * c).rstrip
+    count == 0 ? ((say + " ") * 2).rstrip : ((say + " ") * count).rstrip
   end
