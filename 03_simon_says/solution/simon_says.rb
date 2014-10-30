@@ -17,3 +17,13 @@
   def first_word(say)
     say[0..say.index(" ")-1]
   end
+
+  def titleize(say)
+    if say.index(" ")==nil then say.capitalize else
+    words=say.split
+    z=words.map{ |i| i.length==3||i=="over" ? i.downcase : i.capitalize }
+    z[0].capitalize!
+    z.join(" ")
+    end
+  end
+  
