@@ -8,6 +8,6 @@
  end
 
  def sum(a=[])
-   a.empty? ? 0 : a.each_index {|i| result+=i}  
+   a.empty? ? 0 : a.inject(0) {|i,e| i+e }  
  end
    
