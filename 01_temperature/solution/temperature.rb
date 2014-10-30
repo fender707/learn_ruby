@@ -4,7 +4,7 @@
    end
 
    def ctof(value)
-     value*9/5+32
+     value*9.0/5+32
    end
 
 
