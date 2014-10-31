@@ -1,6 +1,6 @@
 def reverser
- if block_given? then b=yield
- c=b.to_s.split
+ if block_given? then b=yield(a.to_s) 
+ c=b.split
  z=c.map { |i| i.reverse } 
  z.join(" ")
 end
