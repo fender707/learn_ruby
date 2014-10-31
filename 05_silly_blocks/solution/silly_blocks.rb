@@ -16,5 +16,8 @@ def adder(p=@param)
   end
 end
 
-
+def repeater(p=@param)
+   res = yield 
+   return res if res
+end
 
