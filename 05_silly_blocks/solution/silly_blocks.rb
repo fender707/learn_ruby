@@ -17,7 +17,15 @@ def adder(p=@param)
 end
 
 def repeater(p=@param)
-   res = yield 
-   return res if res
+   if p==nil then 
+     res = yield 
+     #return res if res
+   else 
+     i=0
+     while i!=p
+       res=yield 
+       i+=1
+     end
+   end
 end
 
