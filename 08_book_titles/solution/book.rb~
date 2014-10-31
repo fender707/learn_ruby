@@ -2,8 +2,8 @@
   class Book
      attr_reader :title
 
-	def title=(new_title)
-            words = new_title.split(" ")
-	    words[0].capitalize
+	def title=(title_new)
+            words = title_new.split(" ")
+	    
 	end
   end
