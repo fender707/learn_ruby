@@ -1,7 +1,12 @@
   
-  def measure
-    start_time=Time.now
-    yield
-    end_time=Time.now
-    elapsed_time=b-a
+  def measure(count=1)
+    start_time = Time.now
+    itr=0
+    begin
+      yield
+      itr+=1
+    end while itr<count
+    end_time = Time.now
+    elapsed_time=end_time-start_time
+    average_time=elapsed_time.to_f/count
   end
