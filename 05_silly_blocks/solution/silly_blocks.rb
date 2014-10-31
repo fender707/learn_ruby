@@ -6,7 +6,7 @@ def reverser
   end
 end
 
-def adder(p)
+def adder(p=@param)
   if p==nil then
        b=yield 
        b+=1
