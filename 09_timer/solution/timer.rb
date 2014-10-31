@@ -5,4 +5,9 @@
        @seconds=0
      end
 
+     def time_string
+       hours=@seconds/3600
+       minutes=@seconds%3600/60
+       sec=@seconds%3600%60
+     end
   end
