@@ -15,6 +15,6 @@
         keys=[]
         @entries.each { |key,value| 
         keys << key }
-        print keys
+        return keys
     end
   end
