@@ -10,11 +10,11 @@
     end  
 
     def initialize(options={})
-       options.include? (:c) ? @init_celsius=self.ctof(options[:c]) : @init_fahrengheit=self.ftoc(options[:f])
+       options.include?(:c) ? @init_celsius=Temperature.ctof(options[:c]) : @init_fahrengheit=Temperature.ftoc(options[:f])
     end
 
     def self.ctof(ctemp)
-    (ctemp *9.0 /5.0) +32
+    (ctemp * 9.0 /5.0) +32
     end
 
     def self.ftoc(ftemp)
