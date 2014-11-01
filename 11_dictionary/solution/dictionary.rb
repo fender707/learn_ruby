@@ -7,4 +7,7 @@
        @entries={}
     end
 
+    def add(para)
+      para.each { |key,value| @entries[key]=value}
+    end
   end
