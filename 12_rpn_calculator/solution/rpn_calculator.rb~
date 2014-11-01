@@ -38,5 +38,16 @@
        param.split.map { |i| i=='+'||i=='-'||i=='*'||i=='/' ? i.to_sym : i.to_f}
     end
 
+    def evaluate(str)
+       str.split.map { |i| 
+         if i=='+' then plus
+            elsif i=='-' then minus
+            elsif i=='/' then divide
+            elsif i=='*' then times
+            else push(i)
+         end  
+
+}	
+ 
   end
 

@@ -39,6 +39,15 @@
     end
 
     def evaluate(str)
-    end
+       str.split.map { |i| 
+         if i=='+' then plus
+            elsif i=='-' then minus
+            elsif i=='/' then divide
+            elsif i=='*' then times
+            else push(i)
+         end  
+
+}	
+ end
   end
 
