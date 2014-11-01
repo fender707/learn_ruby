@@ -2,17 +2,15 @@
   class Temperature 
      
     def self.from_celsius(celsius)
-        Temperature.new(:c =>celsius)
+        new(:c =>celsius)
     end
     
-    def self.from_celsius(fahrenheit)
-        Temperature.new(:f =>fahrenheit)
+    def self.from_fahrenheit(fahrenheit)
+        new(:f =>fahrenheit)
     end  
 
     def initialize(options={})
-       if options.include?(:c) then @init_temp=(options[:c]) end
-       if options.include?(:f) then @init_temp=Temperature.ftoc(options[:f]) end
-    #  options.include?(:c) ? @init_temp=(options[:c]) : @init_temp=Temperature.ftoc(options[:f])
+       options.include?(:c) ? @init_temp=(options[:c]) : @init_temp=Temperature.ftoc(options[:f])
     end
 
     def in_fahrenheit

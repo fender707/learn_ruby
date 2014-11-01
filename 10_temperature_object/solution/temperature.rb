@@ -28,7 +28,7 @@
     def self.ftoc(ftemp)
     (ftemp - 32) * 5.0 / 9.0
     end
-
+end
     class Celsius < Temperature
       def initialize(temp)
         super(:c => temp)
@@ -41,4 +41,4 @@
       end
     end
 
-  end
+ 
