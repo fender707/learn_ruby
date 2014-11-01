@@ -1,5 +1,13 @@
 
   class RPNCalculator
-  
+    
+    def push(value)
+      
+    end
+   
+    def plus
+      
+    end
+
   end
 
