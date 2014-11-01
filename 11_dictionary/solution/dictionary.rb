@@ -30,6 +30,7 @@
      
     def printable
        list=@entries.map  { |key,value| "[#{key}] \"#{value}\"" }
+       list.join("\n")
     end
 
   end
