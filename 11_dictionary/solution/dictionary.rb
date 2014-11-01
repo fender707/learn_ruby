@@ -29,7 +29,7 @@
     end
      
     def printable
-       list=@entries.map  { |key,value| "[#{key}] \"#{value}\"" }
+       list=@entries.sort.map  { |key,value| "[#{key}] \"#{value}\"" }
        list.join("\n")
     end
 

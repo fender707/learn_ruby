@@ -25,12 +25,12 @@
     end
     
     def find(param)
-      entries.select { |key,value| key[0...param.length]==param }                 
+      entries.select { |key,value| if key[0...param.length]==param then key end}                 
     end
      
     def printable
-       list=@entries.map  { |key,value| "[#{key}] \"#{value}\"" }
-       list.join(\n)
+       list=@entries.sort.map  { |key,value| "[#{key}] \"#{value}\"" }
+       list.join("\n")
     end
 
   end
