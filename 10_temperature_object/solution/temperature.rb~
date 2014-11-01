@@ -13,11 +13,11 @@
        options.include?(:c) ? @init_celsius=Temperature.ctof(options[:c]) : @init_fahrenheit=Temperature.ftoc(options[:f])
     end
 
-    def self.in_fahrenheit
+    def in_fahrenheit
       @init_fahrenheit
     end  
 
-    def self.in_celsius
+    def in_celsius
       @init_celsius
     end  
   

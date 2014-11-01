@@ -14,7 +14,7 @@
     end
 
     def in_fahrenheit
-      @init_fahrenheit
+      Temperature.ctof(@init_fahrenheit)
     end  
 
     def in_celsius
