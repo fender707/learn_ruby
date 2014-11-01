@@ -34,8 +34,8 @@
       calculator.last
     end
 
-    def tokens
-    
+    def tokens(param)
+       param.split.map { |i| i=='+'||i=='-'||i=='*'||i=='/' ? i.to_sym : i.to_f}
     end
 
   end

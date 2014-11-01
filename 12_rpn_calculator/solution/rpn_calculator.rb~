@@ -34,5 +34,9 @@
       calculator.last
     end
 
+    def tokens(param)
+       
+    end
+
   end
 
