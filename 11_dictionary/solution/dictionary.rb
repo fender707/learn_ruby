@@ -12,7 +12,9 @@
     end
 
     def keywords
+        keys=[]
         @entries.each { |key,value| 
         keys << key }
+        return keys
     end
   end
