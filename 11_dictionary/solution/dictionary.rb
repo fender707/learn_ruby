@@ -16,13 +16,17 @@
 
     def keywords
         keys=[]
-        @entries.each { |key,value| 
-        keys << key }
+        @entries.each { |key,value| keys << key }
         return keys
     end
 
     def include?(animal)
       keywords.include?(animal)
-   end
+    end
     
+    def find(param)
+       entries.select { |key,value| key[0...param.length]==param }
+                        
+    end
+     
   end
