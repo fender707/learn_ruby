@@ -21,5 +21,8 @@
         return keys
     end
 
+    def include?(animal)
+      keywords.include?(animal)
+   end
     
   end

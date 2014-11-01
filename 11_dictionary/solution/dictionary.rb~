@@ -8,6 +8,9 @@
     end
 
     def add(para)
+      if para.class==String
+        then para= {para=>nil}
+      end
       para.each { |key,value| @entries[key]=value}
     end
 
@@ -17,4 +20,6 @@
         keys << key }
         return keys
     end
+
+    
   end
