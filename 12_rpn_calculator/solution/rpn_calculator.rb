@@ -46,8 +46,8 @@
             elsif i=='*' then times
             else push(i)
          end  
-
-}	
- end
+                     }	
+       value
+    end
   end
 
