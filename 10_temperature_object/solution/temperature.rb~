@@ -9,4 +9,8 @@
         new(:f =>fahrenheit)
     end  
 
+    def initialize(options={})
+      
+    end
+
   end
