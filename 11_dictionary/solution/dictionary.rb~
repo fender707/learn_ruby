@@ -17,7 +17,7 @@
     def keywords
         keys=[]
         @entries.each { |key,value| keys << key }
-        return keys
+        return keys.sort
     end
 
     def include?(animal)
@@ -25,7 +25,7 @@
     end
     
     def find(param)
-       entries.select { |key,value| key[0...param.length]==animal }
+       entries.select { |key,value| key[0...param.length]==param }
                         
     end
      

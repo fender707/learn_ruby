@@ -17,16 +17,19 @@
     def keywords
         keys=[]
         @entries.each { |key,value| keys << key }
-        return keys
+        return keys.sort
     end
 
     def include?(animal)
-      keywords.include?(animal)
+        keywords.include?(animal)
     end
     
     def find(param)
-       entries.select { |key,value| key[0...param.length]==param }
-                        
+      entries.select { |key,value| key[0...param.length]==param }                 
     end
      
+    def printable
+       list=@entries.map  { |key,value| "[#{key}] \"#{value}\"" }
+    end
+
   end
