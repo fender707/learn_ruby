@@ -5,20 +5,20 @@
         new(:c =>celsius)
     end
     
-    def self.from_celsius(fahrenheit)
+    def self.from_fahrenheit(fahrenheit)
         new(:f =>fahrenheit)
     end  
 
     def initialize(options={})
-       options.include?(:c) ? @init_temp=Temperature.ctof(options[:c]) : @init_temp=(options[:f])
+       options.include?(:c) ? @init_temp=(options[:c]) : @init_temp=Temperature.ftoc(options[:f])
     end
 
     def in_fahrenheit
-      @init_temp
+      Temperature.ctof(@init_temp)
     end  
 
     def in_celsius
-      Temperature.ftoc(@init_temp)
+      @init_temp
     end  
   
     def self.ctof(ctemp)
@@ -27,6 +27,18 @@
 
     def self.ftoc(ftemp)
     (ftemp - 32) * 5.0 / 9.0
+    end
+
+    class Celsius < Temperature
+      def initialize(temp)
+        super(:c => temp)
+      end
+    end
+
+    class Fahrenheit < Temperature
+      def initialize(temp)
+        super(:f => temp)
+      end
     end
 
   end
