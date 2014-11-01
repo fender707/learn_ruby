@@ -38,5 +38,7 @@
        param.split.map { |i| i=='+'||i=='-'||i=='*'||i=='/' ? i.to_sym : i.to_f}
     end
 
+    def evaluate(str)
+    end
   end
 
