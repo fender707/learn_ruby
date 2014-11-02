@@ -9,7 +9,7 @@
        if args.empty? then arguments={} else arguments=args[0] end
        res=""
        res<<"<#{method_name}"
-       arguments.map { |key,value| "#{key}='#{value}'" }
+       arguments.map { |key,value| res << "#{key}='#{value}'" }
        res << "/>"
      end
 
