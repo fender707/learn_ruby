@@ -1,7 +1,7 @@
   
    class XmlDocument
    
-     def method_missing(method_name)
+     def method_missing
     
      end
 
