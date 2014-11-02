@@ -2,7 +2,9 @@
   class Array
      
     def sum
-       self.each {|i| if i=[] then res=0 else res+=i}
+      res=0 
+      if self.empty? then return 0 end
+      self.map {|i| res+=i}
     end
-
+    res
   end
