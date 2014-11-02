@@ -5,6 +5,7 @@
       res=0 
       if self.empty? then return 0 end
       self.map {|i| res+=i}
+      res
     end
-    res
+    
   end

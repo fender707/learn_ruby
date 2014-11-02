@@ -8,4 +8,8 @@
       res
     end
     
+    def square
+      self.each{|n| n*n}
+    end
+  
   end
