@@ -13,7 +13,7 @@
     end
 
     def square!
-      self.each! {|n| n*n}
+      self.map! {|n| n*n}
     end
   
   end
