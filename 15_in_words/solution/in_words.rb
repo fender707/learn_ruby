@@ -29,3 +29,7 @@
      end
   end
 end
+
+class Bignum
+    super 
+end
