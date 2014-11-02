@@ -4,13 +4,18 @@
       ones = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
       tens = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
       teens = ['ten','eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']  
+      hundr_digits= [100,1000,1_000_000,1_000_000_000,1_000_000_000_000]
+      hundr= ["hundred","thousand","million","billion","trillion"]
+      probel=" "
     if self < 10 then ones[self] 
-    #if self > 9 && self < 20 then 
      elsif self > 9 && self < 20 then teens[self-10] 
      elsif self > 19 && self < 100 
          if self % 10 == 0 then tens[self/10-1]
-                else tens[(self/10)*10] + " " + (self % 10).in_words 
+                else tens[(self/10)-1] + probel + (self % 10).in_words 
                 end
+         else
+         max_num = hundr_digits.take_while { |i| i <= self}.last
+          first=(self/max_num).in_words + probel + hundr_digits[max_num]
     end
   end
 end
