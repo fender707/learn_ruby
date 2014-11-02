@@ -1,11 +1,12 @@
-  HUNDR = {
+module Words  
+HUNDR = {
    100=> "hundred",
    1000=> "thousand",
    1000000=> "million",
    1_000_000_000=> "billion",
    1_000_000_000_000=> "trillion",
 }
-  class Fixnum
+  #class Fixnum
     def in_words
       ones = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
       tens = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
@@ -29,7 +30,12 @@
      end
   end
 end
+#end
 
+
+class Fixnum
+    include Words
+end
 class Bignum
-    super 
+    include Words
 end
