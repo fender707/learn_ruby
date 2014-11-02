@@ -1,8 +1,13 @@
   
    class XmlDocument
-   
-     def method_missing
-    
+     
+     def initialize param=false
+       @param=param
+     end   
+ 
+     def method_missing(method_name)
+       res=""
+  
      end
 
    end
