@@ -9,6 +9,7 @@
      def method_missing(method_name,*args,&block)
        if args.empty? then arguments={} else arguments=args[0] end
        res=""
+       res << ("  " * @levels) if @param
        res << "<#{method_name}"
        arguments.map { |key,value| res << " #{key}='#{value}'" }
          if block then  

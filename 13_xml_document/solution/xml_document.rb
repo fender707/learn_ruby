@@ -19,7 +19,8 @@
            res <<  yield 
            @levels -= 1 
            res << ("  " * @levels) if @param
-           res<<"</#{method_name}>"
+           res << "</#{method_name}>"
+           res << "\n" if @param
          else
            res << "/>"
 	   res << "\n" if @param
