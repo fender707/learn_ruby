@@ -19,9 +19,9 @@
   end
 
   def titleize(say)
-    #words=say.split
     words=say.split.map{ |i| i.length<=3||i=="over" ? i.downcase : i.capitalize }
     words[0].capitalize!
     words.join(" ")
   end
   
+OD
