@@ -1,30 +1,28 @@
 def reverser
-  if block_given? then b=yield
-    c=b.to_s.split
-    z=c.map { |i| i.reverse } 
-    z.join(" ")
+  if block_given? then
+    yield.to_s.split.map { |i| i.reverse }.join(" ") 
   end
 end
 
-def adder(p=@param)
-  if p==nil then
-       b=yield 
-       b+=1
-    else 
-       b=yield 
-       b+=p
+def adder(value=@param)
+  if value==nil then
+    block_number=yield 
+    block_number+=1
+  else 
+    block_number=yield 
+    block_number+=value
   end
 end
 
-def repeater(p=@param)
-   if p==nil then 
-     res = yield 
+def repeater(value=@param)
+   if value==nil then 
+     result = yield 
      #return res if res
    else 
-     i=0
-     while i!=p
-       res=yield 
-       i+=1
+     iteration=0
+     while iteration!=value
+       result=yield 
+       iteration+=1
      end
    end
 end
