@@ -4,7 +4,7 @@
 
 
     def initialize
-       @entries={}
+      @entries={}
     end
 
     def add(para)
@@ -15,13 +15,13 @@
     end
 
     def keywords
-        keys=[]
-        @entries.each { |key,value| keys << key }
-        return keys.sort
+      keys=[]
+      @entries.each { |key,value| keys << key }
+      return keys.sort
     end
 
     def include?(animal)
-        keywords.include?(animal)
+      keywords.include?(animal)
     end
     
     def find(param)
@@ -29,8 +29,8 @@
     end
      
     def printable
-       list=@entries.sort.map  { |key,value| "[#{key}] \"#{value}\"" }
-       list.join("\n")
+      list=@entries.sort.map  { |key,value| "[#{key}] \"#{value}\"" }
+      list.join("\n")
     end
 
   end
