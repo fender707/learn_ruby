@@ -1,26 +1,26 @@
   
- def add(a,b)
-   a+b
+ def add(term1,term2)
+   term1 + term2
  end
 
- def subtract(a,b)
-   a-b
+ def subtract(term1,term2)
+   term1 - term2
  end
 
- def sum(a=[])
-   a.empty? ? 0 : a.inject(0) {|i,e| i+e }  
+ def sum(numbers)
+   numbers.empty? ? 0 : numbers.inject(0) {|result,term| result + term }  
  end
 
-  def multiply(a=[])
-       a.inject(1) {|i, elem| i * elem }
-  end
+ def multiply(numbers)
+   numbers.inject(1) {|result, value| result * value }
+ end
 
-  def power(a,b)
-    a**b
-  end  
+ def power(value,degree)
+   value**degree
+ end  
 
-  def factorial(a)
-    a == 0 ? 1 : a * factorial(a-1)
-  end
+ def factorial(value)
+   value <= 1 ? 1 : value * factorial(value - 1)
+ end
     
    

@@ -6,12 +6,12 @@
     say.upcase
   end
 
-  def repeat(say='hello', count=0)
-    count == 0 ? ((say + " ") * 2).rstrip : ((say + " ") * count).rstrip
+  def repeat(say = 'hello', count = 2)
+    ([say] * count).join(" ")
   end
 
-  def start_of_word(say='hello',symbol=1)
-    symbol==1 ? say[symbol-1] : say[0..symbol-1]
+  def start_of_word(say = 'hello',symbol)
+    say[0...symbol]
   end
 
   def first_word(say)
@@ -19,9 +19,9 @@
   end
 
   def titleize(say)
-    words=say.split.map{ |i| i.length<=3||i=="over" ? i.downcase : i.capitalize }
+    words = say.split.map { |word| 
+      word.length <= 3 || word == "over" ? word.downcase : word.capitalize }
     words[0].capitalize!
     words.join(" ")
   end
   
-OD
