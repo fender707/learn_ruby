@@ -4,26 +4,15 @@ def reverser
   end
 end
 
-def adder(value=@param)
-  if value==nil then
-    block_number=yield 
-    block_number+=1
-  else 
-    block_number=yield 
-    block_number+=value
-  end
+def adder(value = 1)
+  yield + value
 end
 
-def repeater(value=@param)
-   if value==nil then 
-     result = yield 
-     #return res if res
+def repeater(value = 1)
+   if !value then 
+     yield 
    else 
-     iteration=0
-     while iteration!=value
-       result=yield 
-       iteration+=1
-     end
+     value.times { yield }
    end
 end
 
