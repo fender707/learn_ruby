@@ -2,12 +2,12 @@
    class XmlDocument
      
      def initialize param=false
-       @param=param
-       @levels=0
+       @param = param
+       @levels = 0
      end   
  
      def method_missing(method_name,*args,&block)
-       if args.empty? then arguments={} else arguments=args[0] end
+       if args.empty? then arguments = {} else arguments = args[0] end
        res=""
        res << ("  " * @levels) if @param
        res << "<#{method_name}"
