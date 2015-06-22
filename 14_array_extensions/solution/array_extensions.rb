@@ -2,18 +2,18 @@
   class Array
      
     def sum
-      res=0 
-      if self.empty? then return 0 end
-      self.map {|i| res+=i}
-      res
+      result = 0 
+      return 0 if self.empty? 
+      self.map {|i| result += i}
+      result
     end
     
     def square
-      self.map{|n| n*n}
+      self.map{|value| value * value}
     end
 
     def square!
-      self.map! {|n| n*n}
+      self.map! {|value| value * value}
     end
   
   end
