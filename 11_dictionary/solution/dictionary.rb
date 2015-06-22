@@ -4,18 +4,18 @@
 
 
     def initialize
-      @entries={}
+      @entries = {}
     end
 
     def add(para)
-      if para.class==String
-        then para= {para=>nil}
+      if para.class == String
+        then para = { para => nil }
       end
-      para.each { |key,value| @entries[key]=value}
+      para.each { |key,value| @entries[key] = value}
     end
 
     def keywords
-      keys=[]
+      keys = []
       @entries.each { |key,value| keys << key }
       return keys.sort
     end
@@ -25,11 +25,11 @@
     end
     
     def find(param)
-      entries.select { |key,value| key[0...param.length]==param }                 
+      entries.select { |key,value| key[0...param.length] == param }                 
     end
      
     def printable
-      list=@entries.sort.map  { |key,value| "[#{key}] \"#{value}\"" }
+      list = @entries.sort.map  { |key,value| "[#{key}] \"#{value}\"" }
       list.join("\n")
     end
 
