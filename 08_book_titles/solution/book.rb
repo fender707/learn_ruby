@@ -2,7 +2,7 @@
   class Book
      attr_reader :title
 
-	def title=(title_new)
+	def title = (title_new)
           little_words = %w{a an and the in of}
           words = title_new.split(" ")
           words = [words[0].capitalize] + words[1..words.length].each { |elem| 
