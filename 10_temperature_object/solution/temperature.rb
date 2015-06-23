@@ -10,7 +10,7 @@
     end  
 
     def initialize(options)
-      options.include?(:c) ? @init_temp=(options[:c]) : @init_temp=Temperature.ftoc(options[:f])
+      options.include?(:c) ? @init_temp = (options[:c]) : @init_temp = Temperature.ftoc(options[:f])
     end
 
     def in_fahrenheit
