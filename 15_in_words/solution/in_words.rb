@@ -8,9 +8,9 @@ HUNDR = {
 }
 
     def in_words
-      ones = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-      tens = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
-      teens = ['ten','eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']  
+      ones = %w(zero one two three four five six seven eight nine)
+      tens = %w(ten twenty thirty forty fifty sixty seventy eighty ninety)
+      teens = %w(ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)  
 
       space=" "
       if self < 10 then 
