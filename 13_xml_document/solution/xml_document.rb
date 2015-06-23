@@ -1,31 +1,31 @@
-  
+  `
    class XmlDocument
      
-     def initialize param=false
+     def initialize param = false
        @param = param
        @levels = 0
      end   
  
      def method_missing(method_name,*args,&block)
        if args.empty? then arguments = {} else arguments = args[0] end
-       res=""
-       res << ("  " * @levels) if @param
-       res << "<#{method_name}"
-       arguments.map { |key,value| res << " #{key}='#{value}'" }
+       result = ""
+       result << ("  " * @levels) if @param
+       result << "<#{method_name}"
+       arguments.map { |key,value| result << " #{key}='#{value}'" }
          if block then  
-           res << ">"
-           res << "\n" if @param
+           result << ">"
+           result << "\n" if @param
 	   @levels += 1 
-           res <<  yield 
+           result <<  yield 
            @levels -= 1 
-           res << ("  " * @levels) if @param
-           res << "</#{method_name}>"
-           res << "\n" if @param
+           result << ("  " * @levels) if @param
+           result << "</#{method_name}>"
+           result << "\n" if @param
          else
-           res << "/>"
-	   res << "\n" if @param
-         end
-	res
+           result << "/>"
+	   result << "\n" if @param
+         end 
+	result
      end
 
    end
